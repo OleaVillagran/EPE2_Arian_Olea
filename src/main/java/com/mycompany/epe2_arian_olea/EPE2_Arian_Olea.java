@@ -3,7 +3,8 @@
  */
 
 package com.mycompany.epe2_arian_olea;
-
+import com.mycompany.Datos_Factura;
+import com.mycompany.Ventas;
 /**
  *
  * @author kripp

@@ -8,6 +8,6 @@ package com.mycompany.epe2_arian_olea;
  *
  * @author kripp
  */
-public class Ventas {
+public class Ventas extends Datos_Factura{
     
 }
