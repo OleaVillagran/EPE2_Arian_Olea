@@ -20,6 +20,7 @@ public class EPE2_Arian_Olea {
         //Creo la instancia de Scanner
         Scanner scanner = new Scanner(System.in);
 
+        //Menu de ingreso, contiene prints para pedir la info y Scanners para almacenar la info ingresada
         System.out.println("¡Bienvenido!");
         System.out.println("------------");
         System.out.println("MENU DE INGRESO DE FACTURAS");
@@ -42,8 +43,10 @@ public class EPE2_Arian_Olea {
         System.out.print("Ingrese monto total: ");
         double montoVentas = scanner.nextDouble();
 
+        //cierro Scanner para liberar memoria
         scanner.close();
 
+        //creo las instancias u objetos para ingresar los input anteriores
         Datos_Factura factura = new Datos_Factura(nombreCliente, apellidoCliente, edadCliente, rutCliente, nombreEmpresa, rutEmpresa, giroEmpresa);
         Ventas ventas = new Ventas(totalVentas, montoVentas);
 
@@ -57,8 +60,7 @@ public class EPE2_Arian_Olea {
         System.out.println("Apellido: " + factura.getApellidosCliente());
         System.out.println("Edad: " + factura.getEdadCliente());
         System.out.println("RUT del Cliente: " + factura.getRutCliente());
-
-        System.out.println("\nInformación de la Empresa:");
+        System.out.println("Información de la Empresa:");
         System.out.println("Nombre de la Empresa: " + factura.getNombreEmpresa());
         System.out.println("RUT de la Empresa: " + factura.getRutEmpresa());
         System.out.println("Giro de la Empresa: " + factura.getGiroEmpresa());

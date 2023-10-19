@@ -8,8 +8,10 @@ package com.mycompany.epe2_arian_olea;
  *
  * @author kripp
  */
+//creacion de la clase
 public class Datos_Factura {
 
+    //creo las variables de la clase
     private String nombreCliente;
     private String apellidosCliente;
     private String edadCliente;
@@ -18,11 +20,14 @@ public class Datos_Factura {
     private String rutEmpresa;
     private String giroEmpresa;
 
+    //Constructor vacio
     public Datos_Factura() {
     }
 
+    //creo el constructor y agrego try catch para validar que se ingresen todos los datos, en la excepcion pongo el mensaje a mostrar
       public Datos_Factura(String nombreCliente, String apellidosCliente, String edadCliente, String rutCliente, String nombreEmpresa, String rutEmpresa, String giroEmpresa) {
         try {
+            //aqui valido que los datos no esten vacios con esta condicion
             if (nombreCliente.isEmpty() || apellidosCliente.isEmpty() || edadCliente.isEmpty() || rutCliente.isEmpty() || nombreEmpresa.isEmpty() || rutEmpresa.isEmpty() || giroEmpresa.isEmpty()) {
                 throw new IllegalArgumentException("Todos los campos son obligatorios. Por favor, complete la información.");
             }
@@ -39,6 +44,7 @@ public class Datos_Factura {
         }
     }
 
+      //getters y setters
     public String getNombreCliente() {
         return nombreCliente;
     }
